@@ -1,0 +1,10 @@
+public int minimumTimeToInitialState(String word, int k) {
+       String temp=word;
+       int n=word.length(),count=1;
+       for(int i=k;i<n;i+=k){
+           if(!temp.startsWith(temp.substring(i,n)))
+             count++;
+           else break;  
+       }
+       return count; 
+}
